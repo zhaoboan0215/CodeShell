@@ -1,0 +1,22 @@
+# CodeShell repository default configuration.
+# Keep API keys out of this file. For this provider, set OPENAI_API_KEY.
+providers:
+  - name: deepseek-official
+    protocol: openai
+    base_url: https://api.deepseek.com
+    model: deepseek-v4-pro
+    models:
+      - deepseek-flash
+      - deepseek-v4-pro
+    api_key: ""
+    thinking: true
+    context_window: 1000000
+
+permission_mode: default
+enable_fork: true
+enable_verification_agent: false
+
+mcp_servers:
+  - name: context7
+    command: npx
+    args: ["-y", "@upstash/context7-mcp"]
